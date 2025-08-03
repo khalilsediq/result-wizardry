@@ -4,6 +4,7 @@ import { ResultCard } from "@/components/ResultCard";
 import { ExportButtons } from "@/components/ExportButtons";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
 
 const Index = () => {
   const [studentData, setStudentData] = useState<StudentData | null>(null);
@@ -19,8 +20,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30 p-4">
-      {!showResult ? (
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30">
+      <Navbar />
+      <div className="p-4">
+        {!showResult ? (
         <div className="container mx-auto py-8">
           <div className="animate-fade-in">
             <StudentForm onGenerateResult={handleGenerateResult} />
@@ -47,6 +50,7 @@ const Index = () => {
           )}
         </div>
       )}
+      </div>
     </div>
   );
 };

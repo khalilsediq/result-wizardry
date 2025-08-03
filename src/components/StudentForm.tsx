@@ -168,17 +168,6 @@ export const StudentForm = ({ onGenerateResult }: StudentFormProps) => {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="age" className="text-sm font-medium text-foreground">Age</Label>
-                <Input
-                  id="age"
-                  value={formData.age}
-                  onChange={(e) => setFormData(prev => ({ ...prev, age: e.target.value }))}
-                  className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-                  placeholder="Enter age"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
                 <Label htmlFor="campusName" className="text-sm font-medium text-foreground">Campus Name</Label>
                 <Input
                   id="campusName"
