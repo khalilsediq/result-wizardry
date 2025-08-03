@@ -19,25 +19,31 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/30 p-4">
       {!showResult ? (
         <div className="container mx-auto py-8">
-          <StudentForm onGenerateResult={handleGenerateResult} />
+          <div className="animate-fade-in">
+            <StudentForm onGenerateResult={handleGenerateResult} />
+          </div>
         </div>
       ) : (
         <div className="container mx-auto py-8">
-          <div className="mb-6 print:hidden">
-            <Button onClick={handleBackToForm} variant="outline" className="flex items-center gap-2">
+          <div className="mb-6 print:hidden animate-fade-in">
+            <Button 
+              onClick={handleBackToForm} 
+              variant="outline" 
+              className="flex items-center gap-2 hover:scale-105 transition-all duration-200"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Form
             </Button>
           </div>
           
           {studentData && (
-            <>
+            <div className="animate-fade-in">
               <ResultCard studentData={studentData} />
               <ExportButtons studentData={studentData} />
-            </>
+            </div>
           )}
         </div>
       )}
