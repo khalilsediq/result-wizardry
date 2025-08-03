@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				result: {
+					header: 'hsl(var(--result-header))',
+					border: 'hsl(var(--result-border))',
+					'table-header': 'hsl(var(--result-table-header))',
+					text: 'hsl(var(--result-text))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
